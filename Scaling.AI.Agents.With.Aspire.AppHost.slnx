@@ -1,0 +1,12 @@
+<Solution>
+  <Project Path="ai-service/ai-service.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="1a52d673-c095-42f1-966d-c83ca08b6f87">
+    <Build Project="false" />
+  </Project>
+  <Project Path="MyAPI/MyAPI.csproj" />
+  <Project Path="MyFrontend/MyFrontend.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Scaling.AI.Agents.With.Aspire.AppHost.AppHost/Scaling.AI.Agents.With.Aspire.AppHost.AppHost.csproj" />
+  <Project Path="Scaling.AI.Agents.With.Aspire.AppHost.ServiceDefaults/Scaling.AI.Agents.With.Aspire.AppHost.ServiceDefaults.csproj" />
+</Solution>
