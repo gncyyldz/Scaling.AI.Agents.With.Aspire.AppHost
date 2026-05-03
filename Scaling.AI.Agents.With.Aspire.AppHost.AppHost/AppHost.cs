@@ -5,6 +5,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 var worktreeName = GitFolderResolver.GetGitFolderName();
 
 var redisCache = builder.AddRedis($"redisCache-{worktreeName}");
+
 var postgreDB = builder.AddPostgres($"postgreDB-{worktreeName}")
                        .WithImage("postgres", "18")
                        .AddDatabase("mydb");
