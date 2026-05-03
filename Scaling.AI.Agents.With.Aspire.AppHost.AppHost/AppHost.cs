@@ -1,11 +1,11 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var redisCache = builder.AddRedis("redisCache");
-var postgreDB = builder.AddPostgres("postgreDB")
+var redisCache = builder.AddRedis("redisCache", port: 6379);
+var postgreDB = builder.AddPostgres("postgreDB", port: 5432)
                        .WithImage("postgres", "18")
                        .AddDatabase("mydb");
 
-var rabbitMQMessaging = builder.AddRabbitMQ("rabbitMQMessaging")
+var rabbitMQMessaging = builder.AddRabbitMQ("rabbitMQMessaging", port: 5672)
                                .WithImage("rabbitmq", "latest");
 
 var myAPI = builder.AddProject<Projects.MyAPI>("myAPI")
